@@ -7,7 +7,7 @@ Um aplicativo de contador React simples que utiliza o hook `useState` para geren
 1. Clone o repositório:
 
     ```bash
-    git clone [https://github.com/seu-usuario/seu-projeto.git](https://github.com/Raphael015/Programa-react-contador)
+    git clone https://github.com/Raphael015/Programa-react-contador)
     ```
 
 2. Navegue até o diretório do projeto:
@@ -36,6 +36,7 @@ Este aplicativo é bastante simples. Ao iniciar, você verá a contagem atual e 
 
 ```jsx
 import React, { useState } from 'react';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -49,11 +50,15 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Contador</h1>
-      <p>Contagem: {count}</p>
-      <button onClick={increment}>Incrementar</button>
-      <button onClick={decrement}>Decrementar</button>
+    <div className="App">
+      <header className="App-header">
+        <h1>Olá, Raphael!</h1>
+        <p>Bem-vindo ao meu projeto React.</p>
+        <h1>Contador</h1>
+        <p>Contagem: {count}</p>
+        <button onClick={decrement}>Remover</button>
+        <button onClick={increment}>Adicionar</button>
+      </header>
     </div>
   );
 }
